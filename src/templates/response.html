@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Response</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            margin: auto;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Response</h1>
+        <p id="responseContent"></p>
+        <button id="copyButton">Copy to Clipboard</button>
+    </div>
+    <script>
+        const response = new URLSearchParams(window.location.search).get('response');
+        document.getElementById('responseContent').textContent = response;
+
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const textToCopy = response;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('Response copied to clipboard!');
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+                alert('Failed to copy response to clipboard');
+            });
+        });
+    </script>
+</body>
+</html>

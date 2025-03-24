@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA and General Prompt Generation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QA and General Prompt Generation</h1>
+        <form id="combinedForm">
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="Enter subject">
+            </div>
+            <div>
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" placeholder="Enter topic">
+            </div>
+            <div>
+                <label for="subtopic">Subtopic:</label>
+                <input type="text" id="subtopic" placeholder="Enter subtopic">
+            </div>
+            <p>OR</p>
+            <div>
+                <label for="prompt">General Prompt:</label>
+                <input type="text" id="prompt" placeholder="Enter general prompt">
+            </div>
+            <button type="submit">Generate Response</button>
+            <!-- <button type="button" onclick="clearInputs()">Clear Inputs</button> -->
+        </form>
+        <p id="error" class="error"></p>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
